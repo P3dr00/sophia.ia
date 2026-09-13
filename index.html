@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07141f">
+  <title>S.H.O.P.I.A</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/static/icon.svg">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="grid"></div>
+  <main>
+    <header>
+      <div class="wordmark">S.H.O.P.I.A <small>CORE 1.0</small></div>
+      <div class="online"><i></i><span id="connection">CONECTANDO</span></div>
+    </header>
+
+    <section class="hero" aria-live="polite">
+      <button id="orb" class="orb" aria-label="Ativar S.H.O.P.I.A">
+        <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+        <span class="core"></span>
+      </button>
+      <h1 id="state">INICIALIZANDO</h1>
+      <p id="hint">Toque no núcleo ou diga “S.H.O.P.I.A”</p>
+    </section>
+
+    <section class="telemetry">
+      <div><span>NÚCLEO</span><b id="coreStatus">VERIFICANDO</b></div>
+      <div><span>VOZ</span><b id="voiceStatus">VERIFICANDO</b></div>
+      <div><span>DISPOSITIVOS</span><b id="deviceStatus">PRONTO</b></div>
+    </section>
+
+    <button id="settingsButton" class="settings-button" aria-label="Configurações">⚙</button>
+  </main>
+
+  <dialog id="settingsDialog">
+    <form method="dialog">
+      <h2>Configuração</h2>
+      <label>Token da S.H.O.P.I.A
+        <input id="tokenInput" type="password" autocomplete="off" placeholder="Cole o token definido no arquivo .env">
+      </label>
+      <label>Forma de ativação
+        <select id="activationMode">
+          <option value="wake">Palavra S.H.O.P.I.A e toque</option>
+          <option value="touch">Somente por toque</option>
+        </select>
+      </label>
+      <div class="dialog-actions">
+        <button value="cancel">Cancelar</button>
+        <button id="saveSettings" value="default">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
+

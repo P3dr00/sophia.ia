@@ -1,0 +1,14 @@
+{
+  "name": "S.H.O.P.I.A",
+  "short_name": "S.H.O.P.I.A",
+  "description": "Assistente operacional por voz",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#03080e",
+  "theme_color": "#07141f",
+  "lang": "pt-BR",
+  "icons": [
+    {"src": "/static/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}
+
